@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metastatic Breast Cancer — Palliative Modalities (NCCN-inspired)</title>
+  <style>
+    :root{
+      --accent:#C71585;
+      --accent-2:#FF6FA3;
+      --bg:#fff;
+      --muted:#555;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,system-ui,Arial; margin:0;background:linear-gradient(180deg,#fff 0%,#fcf7fb 100%);color:#222;-webkit-font-smoothing:antialiased}
+    header{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:28px 18px}
+    .container{max-width:980px;margin:22px auto;padding:0 18px}
+    h1{margin:0;font-size:1.6rem;letter-spacing:0.2px}
+    .hero-sub{margin-top:10px;color:rgba(255,255,255,0.95);font-weight:500}
+
+    /* Layout: vertical (longitudinal) sections */
+    .sections{display:flex;flex-direction:column;gap:16px;margin-top:22px}
+
+    .card{background:linear-gradient(180deg,var(--card),#fbf7fb);border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(17,12,29,0.06);border:1px solid rgba(0,0,0,0.03);display:flex;gap:16px;align-items:flex-start}
+    .card .left{width:86px;flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+    .icon-wrap{width:72px;height:72px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(199,21,133,0.12),rgba(255,111,163,0.07));box-shadow:inset 0 -6px 20px rgba(199,21,133,0.03)}
+    .content{flex:1}
+    .badge{display:inline-block;background:#fff0f6;color:var(--accent);padding:6px 10px;border-radius:12px;font-weight:700;margin-bottom:6px}
+    h2{margin:0;font-size:1.05rem}
+    .muted{color:var(--muted);font-size:0.92rem;margin-top:6px}
+    details{margin-top:10px}
+    summary{font-weight:700;cursor:pointer;list-style:none;background:linear-gradient(90deg,#FFC0CB,#FFB6C1);color:#fff;padding:10px 14px;border-radius:8px;transition:background 0.3s ease;}
+    summary:hover{background:linear-gradient(90deg,#FFB6C1,#FF69B4);}
+    ul{margin:8px 0 0 18px}
+    .actions{display:flex;gap:8px;margin-top:12px}
+    button{background:var(--accent);border:none;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--accent)}
+    .copyout{width:100%;min-height:110px;padding:10px;margin-top:10px;border-radius:8px;border:1px solid #eee;background:#fff}
+
+    /* Quick pathway card */
+    .pathway{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);box-shadow:0 8px 20px rgba(17,12,29,0.04)}
+
+    footer{margin:28px 0 80px;color:#666;font-size:0.9rem}
+
+    @media (max-width:800px){.card{flex-direction:row}.left{width:64px}.icon-wrap{width:56px;height:56px}}
+    @media (max-width:520px){header{padding:18px}h1{font-size:1.25rem}.card{flex-direction:row}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Metastatic Breast Cancer — Palliative Modalities (NCCN‑inspired)</h1>
+      <div class="hero-sub">A clinician quick‑reference focusing on palliative/systemic and local options for stage IV disease.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="sections">
+
+      <!-- Systemic therapy -->
+      <section class="card">
+        <div class="left">
+          <div class="icon-wrap" aria-hidden>
+            <!-- simple DNA/drug icon -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7c2 2 4 2 6 0s4-2 6 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+          </div>
+        </div>
+        <div class="content">
+          <div class="badge">Systemic therapy</div>
+          <h2>Mainstay for metastatic disease</h2>
+          <div class="muted">Selection guided by receptor status (ER/PR/HER2), pace of disease, prior therapy and patient goals.</div>
+
+          <details open>
+            <summary>Choices & principles</summary>
+            <ul>
+              <li><strong>Endocrine therapy</strong> — first line for HR‑positive disease; often combined with CDK4/6 inhibitors.</li>
+              <li><strong>HER2‑directed agents</strong> — trastuzumab, pertuzumab, ADCs for HER2‑positive disease.</li>
+              <li><strong>Cytotoxic chemotherapy</strong> — for visceral crisis or rapidly progressive disease.</li>
+              <li><strong>Targeted therapies</strong> — e.g., PIK3CA, PARP inhibitors where indicated.</li>
+              <li><strong>Immunotherapy</strong> — selected use in PD‑L1 positive TNBC with chemotherapy.</li>
+            </ul>
+            <div class="actions">
+              <button onclick="copyText('systemic')">Copy summary</button>
+              <button class="ghost" onclick="toggleDetail(this)">Toggle</button>
+            </div>
+          </details>
+
+          <textarea id="systemic" class="copyout" readonly>Systemic therapy: endocrine therapy for HR+ (±CDK4/6), HER2‑directed agents for HER2+, chemotherapy for rapid progression/visceral crisis; targeted therapy guided by biomarkers (PIK3CA, BRCA); immunotherapy for selected TNBC with PD‑L1.</textarea>
+        </div>
+      </section>
+
+      <!-- Radiation therapy -->
+      <section class="card">
+        <div class="left">
+          <div class="icon-wrap" aria-hidden>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 18v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="content">
+          <div class="badge">Radiation therapy</div>
+          <h2>Powerful for symptom relief</h2>
+          <div class="muted">Useful for pain, bleeding, cord compression and brain metastases.</div>
+
+          <details>
+            <summary>Common palliative RT approaches</summary>
+            <ul>
+              <li><strong>Short course RT</strong> — e.g., 8 Gy ×1 or 20 Gy in 5 fractions for bone pain.</li>
+              <li><strong>SRS / SBRT</strong> — for limited oligometastatic lesions (brain, lung, liver, bone).</li>
+              <li><strong>Urgent RT</strong> — for spinal cord compression (+ steroids) or symptomatic central lesions.</li>
+              <li><strong>WBRT</strong> — for diffuse brain metastases when indicated.</li>
+            </ul>
+            <div class="actions">
+              <button onclick="copyText('radiation')">Copy summary</button>
+              <button class="ghost" onclick="toggleDetail(this)">Toggle</button>
+            </div>
+          </details>
+
+          <textarea id="radiation" class="copyout" readonly>Radiation: short hypofractionated courses (eg 8 Gy×1, 20 Gy×5) for bone pain; SRS/SBRT for limited metastases; urgent RT for cord compression; WBRT or SRS for brain mets.</textarea>
+        </div>
+      </section>
+
+      <!-- Surgery & procedures -->
+      <section class="card">
+        <div class="left">
+          <div class="icon-wrap" aria-hidden>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 7v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="content">
+          <div class="badge">Surgery & procedures</div>
+          <h2>Primarily local, symptom‑directed</h2>
+          <div class="muted">Consider for bleeding, infection, impending fracture, or selected metastasectomy.</div>
+
+          <details>
+            <summary>Role of surgery</summary>
+            <ul>
+              <li>Resection of symptomatic primary (ulceration, bleeding) to improve quality of life.</li>
+              <li>Orthopaedic fixation for pathological fractures or imminent fracture.</li>
+              <li>Neurosurgical decompression for selected spinal or brain lesions.</li>
+            </ul>
+            <div class="actions">
+              <button onclick="copyText('surgery')">Copy summary</button>
+              <button class="ghost" onclick="toggleDetail(this)">Toggle</button>
+            </div>
+          </details>
+
+          <textarea id="surgery" class="copyout" readonly>Surgery: resection of symptomatic primary (bleeding/ulceration), orthopaedic fixation for pathologic fractures, neurosurgical decompression for selected spinal/brain lesions.</textarea>
+        </div>
+      </section>
+
+      <!-- Supportive & palliative care -->
+      <section class="card">
+        <div class="left">
+          <div class="icon-wrap" aria-hidden>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7v3a7 7 0 0 0 14 0V9a7 7 0 0 0-7-7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="content">
+          <div class="badge">Supportive & palliative care</div>
+          <h2>Symptom control & holistic care</h2>
+          <div class="muted">Early palliative involvement improves quality of life and may improve outcomes.</div>
+
+          <details>
+            <summary>Elements of supportive care</summary>
+            <ul>
+              <li>Pain management — opioids, adjuvants, interventional options as needed.</li>
+              <li>Dyspnoea, nausea, fatigue — targeted meds and non‑pharmacologic measures.</li>
+              <li>Psychosocial support, goals of care and advance care planning.</li>
+              <li>Bone‑directed agents (bisphosphonates/denosumab) for skeletal events.</li>
+            </ul>
+            <div class="actions">
+              <button onclick="copyText('support')">Copy summary</button>
+              <button class="ghost" onclick="toggleDetail(this)">Toggle</button>
+            </div>
+          </details>
+
+          <textarea id="support" class="copyout" readonly>Supportive care: opioids and adjuvants for pain, antiemetics, steroids for symptom relief, bisphosphonates/denosumab for bone mets, early palliative care involvement and advance care planning.</textarea>
+        </div>
+      </section>
+
+      <!-- Quick patient pathway -->
+      <section class="card pathway">
+        <div style="flex:1">
+          <h2 style="margin:0 0 6px 0">Quick patient pathway (printable)</h2>
+          <div class="muted">Select a common scenario to generate an immediate, copyable plan for notes.</div>
+
+          <label class="muted" style="margin-top:10px;display:block">Select scenario:</label>
+          <select id="scenario" style="width:100%;padding:10px;border-radius:10px;margin-top:6px;border:1px solid #eee;font-size:0.98rem">
+            <option value="visceral">Visceral crisis / rapid progression</option>
+            <option value="bone">Symptomatic bone metastasis</option>
+            <option value="brain">New brain metastasis</option>
+            <option value="local">Bleeding/ulcerated primary</option>
+            <option value="oligo">Oligometastatic disease — consider local therapy</option>
+          </select>
+
+          <div class="actions" style="margin-top:12px">
+            <button onclick="generatePlan()">Generate plan</button>
+            <button class="ghost" onclick="print()">Print</button>
+          </div>
+
+          <textarea id="planout" class="copyout" placeholder="Generated plan will appear here..." readonly></textarea>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="card">
+      <strong>Disclaimer:</strong> This app is an educational quick‑reference inspired by public NCCN guidance (NCCN Guidelines® for Breast Cancer 2025). It is NOT a replacement for full guidelines or specialist clinical judgement. Always consult the complete NCCN guideline and local tumour board for patient care decisions.
+    </footer>
+  </main>
+
+  <script>
+    function copyText(id){
+      try{
+        const ta=document.getElementById(id);
+        ta.focus();
+        ta.select();
+        const ok = navigator.clipboard && navigator.clipboard.writeText;
+        if(ok){
+          navigator.clipboard.writeText(ta.value).then(()=>alert('Copied to clipboard'),()=>alert('Copy failed — select and copy manually'));
+        } else {
+          document.execCommand('copy');
+          alert('Copied to clipboard');
+        }
+      }catch(e){
+        console.error('Copy failed',e);
+        alert('Copy failed — select and copy manually');
+      }
+    }
+
+    function toggleDetail(btn){
+      const d=btn.closest('details');
+      if(d) d.open=!d.open;
+    }
+
+    function generatePlan(){
+      const s=document.getElementById('scenario').value;
+      const out=document.getElementById('planout');
+      let txt='';
+      if(s==='visceral'){
+        txt = `Scenario: Visceral crisis or rapidly progressive disease.
+
+Plan: Urgent systemic chemotherapy (if chemo‑sensitive) or appropriate targeted therapy depending on biomarkers (HER2, HR, BRCA, PIK3CA). Consider short‑term symptom control measures (steroids, analgesia). Early palliative care and discuss goals of care.`;
+      } else if(s==='bone'){
+        txt = `Scenario: Symptomatic bone metastasis.
+
+Plan: Short course palliative RT for pain (eg 8 Gy x1 or 20 Gy x5). Analgesics per WHO ladder; consider bisphosphonate
